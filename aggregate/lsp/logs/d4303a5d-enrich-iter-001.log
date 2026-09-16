@@ -1,0 +1,45 @@
+[2026-09-16T23:01:20Z] === ENRICH ITERATION 1 START | repo=python-websockets/websockets sha=d4303a5d ===
+[2026-09-16T23:01:20Z] [iter=1] PHASE START: enrich repo=python-websockets/websockets sha=d4303a5d runlog=/home/runner/work/forx/forx/storage/aggregate/lsp/logs/d4303a5d-enrich-iter-001.log output=/home/runner/work/forx/forx/storage/aggregate/lsp/d4303a5d3e373fc8c34177c3dec1a9c75c8865fa.nq.gz
+[2026-09-16T23:01:20Z] [iter=1] Step 1: Loading AST into disk-backed store mem_mb=78 MB
+[2026-09-16T23:01:42Z] [iter=1] AST store loaded triples=1474555 load_secs=22 mem_mb=937 MB
+[2026-09-16T23:01:42Z] [iter=1] Step 2: Finding LSP targets mem_mb=937 MB
+[2026-09-16T23:01:46Z] [iter=1] LSP targets found call_sites=13456 imports=0 extends=0 implements=0 secs=4
+[2026-09-16T23:01:50Z] [iter=1] Step 2.7: Building position index (one-shot, shared across resolvers) mem_mb=937 MB
+[2026-09-16T23:01:56Z] [iter=1] Position index built positions=98108 nodes_with_types=126953 secs=6 mem_mb=937 MB
+[2026-09-16T23:01:56Z] [iter=1] Step 3: Starting LSP resolution mem_mb=937 MB already_completed_types=[] already_completed_files=0
+[2026-09-16T23:01:56Z] [iter=1] Resolving target type target_type=call_site count=13456
+[2026-09-16T23:01:57Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=0.6 files_done=0 resolved=0 errors=0 current=src/websockets/legacy/client.py
+[2026-09-16T23:04:03Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=2.7 files_done=2 resolved=462 errors=226 current=src/websockets/legacy/server.py
+[2026-09-16T23:04:35Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.3 files_done=3 resolved=573 errors=285 current=tests/sync/test_connection.py
+[2026-09-16T23:05:08Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=3.8 files_done=4 resolved=831 errors=341 current=example/deployment/kubernetes/app.py
+[2026-09-16T23:06:02Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=4.7 files_done=6 resolved=1027 errors=443 current=src/websockets/http11.py
+[2026-09-16T23:06:48Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=5.5 files_done=8 resolved=1207 errors=528 current=tests/test_datastructures.py
+[2026-09-16T23:07:37Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=6.3 files_done=10 resolved=1397 errors=616 current=tests/legacy/test_protocol.py
+[2026-09-16T23:10:14Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=8.9 files_done=11 resolved=1536 errors=900 current=tests/asyncio/test_connection.py
+[2026-09-16T23:11:18Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=10.0 files_done=12 resolved=1928 errors=1004 current=tests/legacy/test_client_server.py
+[2026-09-16T23:13:25Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=12.1 files_done=13 resolved=2159 errors=1226 current=tests/sync/test_messages.py
+[2026-09-16T23:14:22Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=13.0 files_done=15 resolved=2525 errors=1320 current=tests/sync/test_router.py
+[2026-09-16T23:15:23Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=14.0 files_done=17 resolved=2715 errors=1432 current=src/websockets/sync/server.py
+[2026-09-16T23:15:54Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=14.6 files_done=19 resolved=2805 errors=1490 current=setup.py
+[2026-09-16T23:16:38Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=15.3 files_done=22 resolved=3010 errors=1565 current=src/websockets/sync/client.py
+[2026-09-16T23:17:14Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=15.9 files_done=24 resolved=3107 errors=1628 current=src/websockets/extensions/permessage_deflate.py
+[2026-09-16T23:18:09Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=16.8 files_done=26 resolved=3238 errors=1731 current=example/django/notifications.py
+[2026-09-16T23:19:30Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=18.2 files_done=31 resolved=3520 errors=1875 current=tests/sync/test_server.py
+[2026-09-16T23:20:19Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=19.0 files_done=32 resolved=3640 errors=1969 current=src/websockets/headers.py
+[2026-09-16T23:20:55Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=19.6 files_done=34 resolved=3703 errors=2037 current=tests/legacy/test_http.py
+[2026-09-16T23:21:36Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=20.3 files_done=38 resolved=3991 errors=2107 current=tests/legacy/test_framing.py
+[2026-09-16T23:22:07Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=20.8 files_done=40 resolved=4116 errors=2164 current=src/websockets/client.py
+[2026-09-16T23:22:47Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=21.5 files_done=43 resolved=4182 errors=2238 current=tests/proxy.py
+[2026-09-16T23:23:31Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=22.2 files_done=47 resolved=4428 errors=2318 current=src/websockets/server.py
+[2026-09-16T23:24:39Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=23.3 files_done=52 resolved=4608 errors=2446 current=experiments/compression/benchmark.py
+[2026-09-16T23:25:14Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=23.9 files_done=58 resolved=4771 errors=2511 current=tests/test_utils.py
+[2026-09-16T23:25:46Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=24.4 files_done=69 resolved=4941 errors=2572 current=src/websockets/imports.py
+[2026-09-16T23:26:19Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=25.0 files_done=77 resolved=5069 errors=2635 current=example/deployment/fly/app.py
+[2026-09-16T23:26:50Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=25.5 files_done=81 resolved=5135 errors=2696 current=example/legacy/unix_server.py
+[2026-09-16T23:27:36Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=26.3 files_done=94 resolved=5323 errors=2782 current=example/tutorial/step2/connect4.py
+[2026-09-16T23:28:06Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=26.8 files_done=108 resolved=5458 errors=2839 current=example/tutorial/step3/connect4.py
+[2026-09-16T23:28:37Z] [iter=1] HEARTBEAT target_type=call_site elapsed_min=27.3 files_done=146 resolved=5680 errors=2894 current=example/sync/echo.py
+[2026-09-16T23:29:05Z] [iter=1] Target type resolved target_type=call_site resolved=5808 errors=2935 secs=1629 mem_mb=937 MB
+[2026-09-16T23:29:13Z] [iter=1] Step 5: Writing final enrichment file triples=96881
+[2026-09-16T23:29:15Z] [iter=1] Enrichment file written path=/home/runner/work/forx/forx/storage/aggregate/lsp/d4303a5d3e373fc8c34177c3dec1a9c75c8865fa.nq.gz size_kb=2018
+[2026-09-16T23:29:15Z] [iter=1] PHASE END: enrich elapsed_s=1675 elapsed_min=27.9 total_triples=96881
