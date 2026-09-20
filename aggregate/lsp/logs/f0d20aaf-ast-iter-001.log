@@ -1,0 +1,7 @@
+[2026-09-20T05:05:37Z] === AST ITERATION 1 START | repo=python-websockets/websockets sha=f0d20aaf ===
+[2026-09-20T05:05:37Z] [iter=1] PHASE START: ast repo=python-websockets/websockets sha=f0d20aaf
+[2026-09-20T05:05:37Z] [iter=1] Building AST aggregate chunks
+[2026-09-20T05:07:26Z] [iter=1] AST chunks built count=1 triples=1295293
+[2026-09-20T05:07:26Z] [iter=1] AST .complete marker written path=/home/runner/work/forx/forx/storage/aggregate/ast/f0d20aafab027e9b99460b193dcb709872b219a5/.complete
+[2026-09-20T05:07:26Z] [iter=1] PHASE END: ast elapsed_s=109 elapsed_min=1.8
+[2026-09-20T05:07:26Z] [iter=1] Wrote .next-action.json next_action=enrich path=/home/runner/work/forx/forx/storage/aggregate/.next-action.json
