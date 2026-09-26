@@ -3,6 +3,11 @@
   "repo": "websockets",
   "versions": [
     {
+      "commit": "f55c1411a780d2829f095d426707860b90ff3c0c",
+      "tag": "11.0.1",
+      "parsed_at": "2026-09-26T07:07:54.504769+00:00"
+    },
+    {
       "commit": "0ce16b23808a154829acf2ec786f1e67c1bd4cdf",
       "tag": "11.0.2",
       "parsed_at": "2026-09-21T05:27:00.829592+00:00"

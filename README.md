@@ -6,29 +6,27 @@ RDF knowledge graph data for [python-websockets/websockets](https://github.com/p
 
 ## How to use this data
 
-The easiest way to get started is to install the [lexq](https://github.com/repolex-ai/lexq) query tool using [uv](https://docs.astral.sh/uv/getting-started/installation/).
-
-If you have uv installed, just copy/paste this into your terminal:
+The easiest way to get started is to install the [rlex](https://github.com/repolex-ai/rlex) query tool:
 
 ```bash
-uv tool install git+https://github.com/repolex-ai/lexq
+cargo install --git https://github.com/repolex-ai/rlex
 ```
 
-This installs lexq onto your system, in your user context. Verify the install:
+Verify the install:
 
 ```bash
-lexq --help
+rlex --help
 ```
 
-**lexq is designed to be used primarily by LLMs in a terminal.** Start up your favorite LLM and ask it to use the lexq tool. It's that easy!
+**rlex is designed to be used primarily by LLMs in a terminal.** Start up your favorite AI assistant and ask it to use rlex. It handles the SPARQL — you just ask questions in plain English.
 
 To load this repo's data:
 
 ```bash
-lexq download python-websockets/websockets
+rlex download python-websockets/websockets
 ```
 
-This will automatically download essential data files from the last parsed commit. Consult `lexq --moreinfo` for other options, including downloading multiple commits, blobs, etc.
+Consult `rlex --help` for other options, including SPARQL queries, HTTP server, and interactive visualization.
 
 ## Data structure
 
@@ -60,7 +58,9 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 │   │   │   └── chunk-001.nq.gz
 │   │   ├── d4303a5d3e373fc8c34177c3dec1a9c75c8865fa
 │   │   │   └── chunk-001.nq.gz
-│   │   └── f0d20aafab027e9b99460b193dcb709872b219a5
+│   │   ├── f0d20aafab027e9b99460b193dcb709872b219a5
+│   │   │   └── chunk-001.nq.gz
+│   │   └── f55c1411a780d2829f095d426707860b90ff3c0c
 │   │       └── chunk-001.nq.gz
 │   ├── lsp
 │   │   ├── 01195322d2620a44039b716cb93c108c2ca9b6b9.nq.gz
@@ -74,7 +74,8 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 │   │   ├── 7ac73c645329055a3c352077b8055e6ed65fa46c.nq.gz
 │   │   ├── bf858ac9a6e047c50614d6990a12345e1f38802c.nq.gz
 │   │   ├── d4303a5d3e373fc8c34177c3dec1a9c75c8865fa.nq.gz
-│   │   └── f0d20aafab027e9b99460b193dcb709872b219a5.nq.gz
+│   │   ├── f0d20aafab027e9b99460b193dcb709872b219a5.nq.gz
+│   │   └── f55c1411a780d2829f095d426707860b90ff3c0c.nq.gz
 │   └── repolex
 │       ├── 01195322d2620a44039b716cb93c108c2ca9b6b9
 │       │   └── chunk-001.nq.gz
@@ -98,7 +99,9 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 │       │   └── chunk-001.nq.gz
 │       ├── d4303a5d3e373fc8c34177c3dec1a9c75c8865fa
 │       │   └── chunk-001.nq.gz
-│       └── f0d20aafab027e9b99460b193dcb709872b219a5
+│       ├── f0d20aafab027e9b99460b193dcb709872b219a5
+│       │   └── chunk-001.nq.gz
+│       └── f55c1411a780d2829f095d426707860b90ff3c0c
 │           └── chunk-001.nq.gz
 └── blob
     ├── 005e9b4bbc4128c6506763538e00369648121b83.nq.gz
@@ -261,12 +264,9 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
     ├── 291bf1fb6d0e27973327041a69a6a7c039eb3389.nq.gz
     ├── 2937a2f15e40a3b46c71d81949f8a81f11ac6d36.nq.gz
     ├── 2980a97b428f5f1d7fce99f37f13851358cc117a.nq.gz
-    ├── 29a2525b4e73b788f773682ce0b88e13eafc6e26.nq.gz
-    ├── 2a1fe9a78503627997051c1ad78441e1e5b4e530.nq.gz
-    ├── 2a39c1b0346325de8b3c613fc7aadb8d7a06138d.nq.gz
-    └── 2a9556dd9e856622b904010f7df8bf5c92beb357.nq.gz
+    └── 29a2525b4e73b788f773682ce0b88e13eafc6e26.nq.gz
 
-30 directories, 200 files
+32 directories, 200 files
 ```
 
 | Directory | What it contains |
@@ -280,10 +280,11 @@ All data is stored as gzip-compressed [N-Quads](https://www.w3.org/TR/n-quads/) 
 | `branch/` | Branch metadata. |
 | `tag/` | Tag metadata. |
 | `filetree/` | File tree snapshots per commit (which files existed and their blob SHAs). |
+| `audit/` | Code architecture and graph audit reports per commit. |
 
 ## Source repository
 
 [python-websockets/websockets](https://github.com/python-websockets/websockets)
 
 ---
-*Parsed on 2026-09-21 by [repolex](https://repolex.ai)*
+*Parsed on 2026-09-26 by [repolex](https://repolex.ai)*
